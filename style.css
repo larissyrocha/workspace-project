@@ -1,0 +1,1030 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Dubai;
+}
+
+:root {
+    --cor-azul: #7698B3;
+    --cor-azulc: #83B5D1;
+    --cor-azule :#172A3A;
+    --cor-bege: #F3D8C7;
+    --cor-rosa: #bc8da0;
+    --cor-branco: #ffff;
+    --cor-gray: #dfe7ed;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background-color: var(--cor-azul);
+    
+}
+.full {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--cor-azul);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-azule);
+    border-radius: 10px;
+    border: 3px solid var(--cor-branco);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.774);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+ 
+}
+
+.container > .left{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    background-color: var(--cor-branco);
+    backdrop-filter: blur(5px);
+    box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+/* header start */
+.container  .left header {
+    position:relative;
+    width: 100%;
+}
+/* logo start */
+.container .left header .logo {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .left header .logo h2 {
+    font-size: 1.9em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+
+.container .left header .logo .close {
+    position: relative;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+    cursor: pointer;
+
+}
+
+/* nav start */
+.container .left header nav {
+    position: relative;
+    padding: 20px 0 20px 0px;
+}
+
+.container .left header nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .left header nav ul li {
+    position: relative;
+    width:  100%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .left header nav ul li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding-left:  20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .3s ease;
+}
+
+.container .left header nav ul li:first-child a,
+.container .left header nav ul li a:hover {
+    transition: 0s;
+    background: var(--cor-azul); 
+    
+}
+
+.container .left header nav ul li a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cor-azul);
+    transition: .3s ease;
+}
+
+.container .left header nav ul li:first-child a::before,
+.container .left header nav ul li a:hover::before {
+    width: 4px;
+}
+
+.container .left header nav ul li a .material-symbols-outlined {
+    color: #999;
+    font-size: 1.7em;
+    margin-right: 10px;
+}
+
+.container .left header nav ul li a .title{
+    color: #999;
+    font-size: 1.1em;
+}
+
+.container .left header nav ul li:first-child a .material-symbols-outlined,
+.container .left header nav ul li:first-child a .title,
+.container .left header nav ul li a:hover .material-symbols-outlined,
+.container .left header nav ul li a:hover .title {
+    color: var(--cor-branco)
+}
+
+.container .right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+/* top start */
+.container .right .top {
+    position: relative;
+    width: 99%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--cor-branco);
+    border-radius: 20px;
+    /*box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;*/
+}
+
+.container .right .top .searchBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .right .top .searchBx h2{
+    color: #000;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.container .right .top .searchBx .inputBx{
+    position:relative;
+    width: 250px;
+    height: 40px;
+    background: var(--cor-azul);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.container .right .top .searchBx .inputBx span{
+    color: var(--cor-branco);
+    cursor: pointer;
+}
+
+.container .right .top .search .inputBx input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+    font-size: 1. 2em;
+    color: #000;
+}
+
+.container .right .top .searchBx .inputBx span.searchClose{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.container .right .top .user{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .right .top .user span{
+    color: #000;
+    cursor: pointer;
+}
+
+.container .right .top .user .userImg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .right .top .user .userImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container .right .top .user h2{
+    font-size: 1.1em;
+    line-height: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.container .right .top .user h2 span {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.container .right .top .user .arrow {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right .top .user .arrow span {
+    color: #000;
+    font-size: 2em;
+    font-weight: 600;
+    transition: 3s ease;
+}
+
+.container .right .top .user .arrow:hover span {
+    transform: scale(1.2);
+}
+
+.container .right .top .user .toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #999;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    display: flexbox;
+
+}
+.container .right .top .user .toggle span{
+    color: #000;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.container .right .top .user .toggle:hover span {
+    /transform: scale(1.1);  
+}
+
+.container .right main {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 90px); /*. Ele calcula a altura como 100% da altura do elemento pai (novamente, o .right), subtraindo 90 pixels. Isso permite que o elemento tenha uma altura menor do que o seu contêiner pai*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*Define as colunas da grade.Cria 3 colunas de largura igual (1fr significa 1 fração igual de espaço disponível). Isso cria uma grade com três colunas.*/
+    grid-template-rows: repeat(6,1fr); /* cria 6 linhas de altura igual, novamente usando 1fr para distribuir o espaço igualmente. Isso cria uma grade com seis linhas.*/
+    gap:  20px; /*Define o espaçamento (margem) entre as células da grade. */
+}
+
+.container .right main .projectCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--cor-branco);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 1 / 4; /* Isso afetará o dimensionamento vertical do elemento na grade, fazendo com que ele abranja três linhas da grade.*/
+}
+
+.container .right main .projectCard .projectTop{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right main .projectCard .projectTop h2{
+    color: #000;
+    font-size: 1. 2em;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .projectTop h2 span {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.container .right main .projectCard .projectTop .projectsDots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .projectTop .projectsDots span {
+    color: #000;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.container .right main .projectCard .projectProgress {
+    position:  relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right main .projectCard .projectProgress .process {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--cor-gray);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .projectProgress .process h2 {
+    color: var(--cor-azul);
+    white-space: nowrap; /*serve para fazer com que o conteúdo de um elemento não seja quebrado em várias linhas*/
+    font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 0.5px; /*é usada para controlar o espaço entre os caracteres (letras) em um texto.*/
+} 
+
+.container .right main .projectCard .projectProgress .priority {
+    position: relative;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .projectProgress .priority::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    background: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #ff0000, 0 0 5px #ff0000
+}
+
+.container .right main .projectCard .projectProgress .priority h2 {
+    color: #ff0000;
+    white-space: nowrap;
+    font-size: 0.9em;
+    font: weight 500;
+}
+
+.container .right main .projectCard .groupImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.container .right main .projectCard .groupImg::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(0, 0, 0, .1)
+}
+
+.container .right main .projectCard .groupImg a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    left: var(--left); /* usada para colocar as imgs na frnete da outra, lado esquerdo*/
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right main .projectCard .groupImg a img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*preencha o contêiner, mantendo sua proporção original e cortando partes da imagem, se necessário, para alcançar esse preenchimento total.*/
+}
+
+.container .right main .projectCard .groupImg a:last-child {
+    border: 3px solid #999;
+    background: #fff;
+}
+
+.container .right main .projectCard .groupImg a:last-child .number{
+    color: #999;
+    font-size: 1.2em;
+}
+
+.container .right main .projectCard .task {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.container .right main .projectCard .task h2 {
+    color: #999;
+    font-size: 1em;
+}
+
+.container .right main .projectCard .task h2 bold {
+    color: black
+}
+
+.container .right main .projectCard .task .line {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50px;
+    z-index: -1; /*especialmente quando há elementos sobrepostos e você deseja determinar qual deles deve estar na frente dos outros*/
+    overflow: hidden;
+}
+
+.container .right main .projectCard .task .line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background: var(--cor-azul);
+    border-radius: 50px;
+    z-index: 1; /*especialmente quando há elementos sobrepostos e você deseja determinar qual deles deve estar na frente dos outros*/
+}
+
+.container .right main .projectCard .due {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .projectCard .due h2 {
+    padding: 0px 10px;
+    border: 2px solid var(--cor-rosa);
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: var(--cor-rosa);
+}
+/*projectCard2*/
+.container .right main .projectCard.projectCard2 {
+    grid-row:  4 / 7;
+}
+.container .right main .projectCard.projectCard2 {
+    height: 97%;
+}
+
+
+.container .right main .projectCard.projectCard2 .projectProgress .process{
+    background: var(--cor-bege);
+}
+
+.container .right main .projectCard.projectCard2 .projectProgress .process h2 {
+    color: var(--cor-rosa);
+}
+
+.container .right main .projectCard.projectCard2 .projectProgress .priority::before {
+    background: #69bc72;
+    box-shadow: 0 0 2px #69bc72, 0 0 5px #69bc72;
+}
+
+.container .right main .projectCard.projectCard2 .projectProgress .priority h2 {
+    color: #69bc72;
+}
+
+.container .right main .projectCard.projectCard2 .task .line::before {
+    background: var(--cor-rosa);
+}
+/*projectCard2 and*/
+/*myTasks start*/
+.container .right main .myTasks{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 1 / 5;
+    grid-column: 2 / 3;
+}
+
+.container .right main .myTasks .tasksHead{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .right main .myTasks .tasksHead h2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots {
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasksHead .tasksDots span {
+    color: #000;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.container .right main .myTasks .tasks {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .right main .myTasks .tasks ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .right main .myTasks .tasks ul li {
+    position: relative;
+    width: 100%;
+    height: calc(100% / 7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right main .myTasks .tasks ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.container .right main .myTasks .tasks ul li:last-child::before {
+    width: 0;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.done {
+    color: var(--cor-branco);
+    background: #69bc72;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksIcon.notDone {
+    background: var(--cor-branco);
+    border: 3px solid #999;
+}
+
+.container .right main .myTasks .tasks ul li .tasksIconName .tasksName {
+    color: #000;
+    cursor: pointer;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right main .myTasks .tasks ul li .tasksStar.full, .container .right main .myTasks .tasks ul li .tasksStar.half {
+    color: #f5c75f;
+}
+
+.container .right main .important {
+    position: relative;
+    width: 100%;
+    height: 95%;
+    background: var(--cor-branco);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 5 / 7;
+    grid-column: 2 / 3;
+    overflow: hidden;
+}
+
+.container .right main .important .importantHead {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .right main .important .importantHead h2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* calendar start */
+
+.container .right main .calendar {
+    position: relative;
+    width:96%;
+    height: 100%;
+    background-color: var(--cor-branco);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;
+    display: flex;
+    justify-content: space-between; /*Alinha os elementos filhos horizontalmente com espaços iguais entre eles.*/
+    align-items: center; /*Alinha os elementos filhos verticalmente no centro do elemento pai.*/
+    flex-direction: column;
+    grid-row: 1/ 4; /*Define o elemento como ocupando as linhas de grade de 1 a 4 em um sistema de grade, controlando sua posição vertical.*/
+    grid-column: 3/ 4; /*Define o elemento como ocupando as colunas de grade de 3 a 4 em um sistema de grade, controlando sua posição horizontal.*/
+    padding: 20px;
+    gap: 10px; /* Define o espaçamento de 10 pixels entre os elementos filhos quando estão empilhados verticalmente.*/
+} 
+
+.container .right main .calendar .calendarHead {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .right main .calendar .calendarHead h2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 18px; /*é usada para controlar o espaço vertical entre as linhas de texto em um elemento HTML. */
+    color: #000;
+    font: 1.2em;
+    cursor: pointer;
+}
+
+.container .right main .calendar .calendarHead .calendarIcon {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.container .right main .calendar .calendarHead .calendarIcon .material-symbols-outlined{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 3px solid var(--cor-azul);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--cor-azulc);
+    font-size: 1.3em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .right main .calendar .calendarData{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .right main .calendar .calendarData .weeks {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .right main .calendar .calendarData .weeks li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.container .right main .calendar .calendarData .days {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 30px);
+    display: grid; /*Define o elemento como um contêiner de grade, permitindo que você organize o conteúdo dentro dele em um sistema de grade.*/
+    grid-template-columns: repeat(7, 1fr); /* Isso cria uma grade com 7 colunas, cada uma ocupando a mesma quantidade de espaço, especificado por 1fr.*/
+    grid-template-rows: repeat(6, 1fr); /* Isso cria uma grade com 6 linhas, cada uma ocupando a mesma quantidade de espaço, especificado por 1fr*/
+    place-items: center; /* Centraliza o conteúdo dentro do elemento na horizontal e vertical. */
+} 
+
+.container .right main .calendar .calendarData .days li {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.container .right main .calendar .calendarData .days li.inactive{
+    color: #999;
+}
+
+.container .right main .calendar .calendarData .days li:hover {
+    background: var(--cor-gray);
+    color: var(--cor-branco);
+    transition: 0s;
+}
+
+.container .right main .calendar .calendarData .days li.active {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+}
+
+/* messages start */
+.container .right main .messages {
+    position: relative;
+    width: 96%;
+    height: 96%;
+    background: var(--cor-branco);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(218, 217, 217, 0.651);
+    inset:  -8px -8px 16px 0px;
+    inset: 0px 11px 28px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 4 / 7;
+    padding: 15px;
+    gap: 3px; /*O gap controla o espaço entre as linhas e colunas desses sistemas de layout.*/
+}
+
+.container .right main .messages .messagesHead {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.container .right main .messages .messagesHead h2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 18px;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.container .right main .messages .messagesUser {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .right main .messages  .messagesUser .messagesUserImg {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .right main .messages .messagesUser .messagesUserImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Essa prorpiedade é util para que imagem preencha o espaço especifico. Pode ser cortada nas laterais, mas mantendo o foto original*/
+    cursor: pointer;
+}
+
+.container .right main .messages .messagesUser h2 {
+    position: relative;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 18px;
+}
+
+.container .right main .messages .messagesUser h2 span {
+    color: #999;
+    font-size: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+

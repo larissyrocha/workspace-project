@@ -1,0 +1,6 @@
+@media (max-width: 1176px) {
+    .container .left {
+        position: absolute;
+        left: -300px;
+    }
+}
