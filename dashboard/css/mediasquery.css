@@ -1,6 +1,116 @@
-@media (max-width: 1176px) {
-    .container .left {
-        position: absolute;
-        left: -300px;
+ @media (max-width: 1176px) {
+     .container .left {
+         position: absolute;
+         /*Define a posição do elemento como absoluta, permitindo posicioná-lo livremente.*/
+         left: -300px;
+         /* Move o elemento para a esquerda, fora da tela, escondendo-o.*/
+         height: calc(100% - 5vh);
+         /* Define a altura do elemento como a altura da tela (100%) menos 5% da altura da janela de visualização*/
+         z-index: 11;
+         transition: .5s ease;
+     }
+     .container .left.active {
+         left: 20px;
+     }
+    
+     .container .right.overlay::before {
+         content: '';
+         /* Pode ser usados para adicionar bordas, fundos, ícones ou outros elementos visuais sem a necessidade de conteúdo de texto real.*/
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         z-index: 10;
+         border-radius: 20px;
+     }
+    
+     .container .right .top .user .toggle {
+         display: block;
+     }
+ }
+
+
+ @media (max-width: 927px) {
+     .container {
+         height: 100%;
+         padding: 15px;
+         /* margin: 30px 0; */
+     }
+
+     .container .left.active {
+         width: calc(100% -40px);
+         height: calc(100vh - 55px);
+         border-bottom-left-radius: 0;
+         border-bottom-left-radius: 0;
+     }
+
+     .container .left header .logo .close {
+         display: block;
+     }
+
+     .container .right main {
+        grid-template-columns:  repeat(1,1fr);
+        grid-template-rows: 1.1fr 1.1fr 1.1fr 1.1 1fr 1.1fr;
     }
-}
+    
+    .container .right main *{
+        grid-column: unset !important; /* Esta linha de código redefine a propriedade grid-column para o valor "unset" e utiliza !important para garantir que essa redefinição tenha prioridade sobre qualquer outra regra CSS que possa estar afetando a propriedade */
+        grid-row: unset !important; /*grid-row para o valor "unset" com !important, removendo qualquer configuração de linha de um layout de grid que possa ter sido aplicado a esses elementos.*/
+    } 
+
+    .container .right main .calendar {
+        width: 100%;
+     }
+
+     .container .right main .messages {
+        width: 100%;
+     }
+
+     .container .right .top .searchBx h2 {
+         font-size: 1.2em;
+     }
+
+     .container .right .top .searchBx .inputBx {
+         width: 45px;
+         cursor: pointer;
+     }
+
+     .container .right .top .searchBx.active {
+         position: absolute;
+         width: calc(100% - 40px);
+         height: 45px;
+         background: var(--cor-branco);
+         z-index: 10;
+         border-radius: 10px;
+     }
+
+     .container .right .top .searchBx.active h2 {
+         display: none;
+     }
+
+     .container .right .top .searchBx.active .inputBx {
+         width: 100%;
+     }
+
+     .container .right .top .searchBx.active .inputBx input {
+         padding-right: 40px;
+     }
+
+     .container .right .top .searchBx.active .inputBx span.searchClose {
+         display: block;
+     }
+
+     .container .right .top .user {
+        gap: 10px;
+     }
+
+ }
+
+ @media (max-width: 586px) {
+     .container .right .top .user .arrow {
+         display: none;
+     }
+
+     .container .right .top .user h2 {
+         display: none;
+     }
+ }
