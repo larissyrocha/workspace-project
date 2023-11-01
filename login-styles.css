@@ -34,7 +34,6 @@ body {
     z-index: 90;
     position: relative;
     max-width: 430px;
-    height: 500px;
     margin-left: 50%;
     background-color: var(--cor-azule);
     border-radius: 10px;
@@ -113,7 +112,3 @@ body {
     color: var(--cor-branco);
     font-weight: bold;
 }
-
-
-
-
