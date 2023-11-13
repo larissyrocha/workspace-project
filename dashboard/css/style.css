@@ -21,9 +21,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 10vh;
-    background-color: var(--cor-azul);
-    
+    background-color: var(--cor-azul);  
 }
+
 .full {
   font-variation-settings:
   'FILL' 1,
@@ -33,11 +33,11 @@ body {
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 10px;   /* definindo a largura da barra de rolagem como 10 pixels.*/
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--cor-azul);
+    background-color: var(--cor-azul);  /*estilizar a área de fundo da barra de rolagem (a "trilha" da barra de rolagem).*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -349,7 +349,7 @@ body {
 }
 
 .container .right .top .user .toggle:hover span {
-    /transform: scale(1.1);  
+    transform: scale(1.1);  
 }
 
 .container .right main {

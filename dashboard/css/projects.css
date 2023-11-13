@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor-azul: #7698B3;
+    --cor-azulc: #83B5D1;
+    --cor-azule: #172A3A;
+    --cor-bege: #F3D8C7;
+    --cor-rosa: #bc8da0;
+    --cor-branco: #fff;
+    --cor-gray: #dfe7ed;
+    --cor-transparente: rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar {
+    /* definindo a largura da barra de rolagem.*/
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    /*estilizar a área de fundo da barra de rolagem (a "trilha" da barra de rolagem).*/
+    background-color: var(--cor-azul);
+}
+
+::-webkit-scrollbar-thumb {
+    /*estilizar o "polegar" da barra de rolagem (a parte que o usuário pode arrastar para rolar). */
+    background: var(--cor-gray);
+    border-radius: 10px;
+    border: 1px solid var(--cor-branco);
+}
+
+/*start top*/
+.container .top {
+    position: relative;
+    /*Define a posição do elemento .container como "relativa" em relação à sua posição original. */
+    width: 100%;
+    height: 70px;
+    display: flex; 
+    /*faz com que ele funcione como um "container flexível". Isso torna mais fácil organizar e alinhar os elementos dentro desse container, seja na horizontal  ou na vertical*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-gray); 
+}  
+
+ .container .top .searchBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer; 
+} 
+
+.container .top .searchBx .inputBx {
+    position:relative;
+    width: 270px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .top .searchBx .inputBx span{
+    color: var(--cor-black);
+    cursor: pointer;
+    margin-left: 5px; 
+}
+
+.container .top .inputBx input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.container .top .user {
+    /* position: relative; */
+    width: 40px;
+    height: 40px;
+    overflow: hidden; /* o conteúdo que sair do tamanho da caixa será cortado e não será exibido na página.*/
+    cursor: pointer;
+    border-radius: 50%;
+    /* display: flex;
+    justify-content: space-between;  */
+}
+
+.container .top .user img{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*start section*/
+.container .sessao {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: rgb(190, 190, 190);
+    font-size: 0.8em;
+} 
+ .container main {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-azule);
+    padding: 10px 6px;
+}
+
+.container main .coluna1 {
+    position: relative;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: var(--cor-gray);
+    text-align: left;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 15px;
+}  
+
+.container main .coluna1 .cartao1 {
+    display: flex;
+    justify-content: space-between; 
+    align-content: center;
+}
+
+.container main .coluna1 .cartao1 .primeira  {
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 10px;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+    
+}  
+ .container main .coluna1 .cartao1 .afazer button.primeira {
+    float: right;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+.container main .coluna1 .add {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container main .coluna1 .segundo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
+    padding: 10px;
+}
+
+.container main .coluna1 .segundo:hover {
+    border: 1px solid var(--cor-azule)
+}
+
+.container main .coluna1 .button.primeira:hover {
+    background: var(--cor-transparente);
+    border-radius: 5px;
+}
+
+.container main .coluna1 .add:hover {
+    background: var(--cor-transparente)
+}
+
+/*start column two*/
+.container main .coluna2 {
+    position: relative;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: var(--cor-gray);
+    text-align: left;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 15px;
+} 
+
+.container main .coluna2 .cartao1 {
+    display: flex;
+    justify-content: space-between; 
+    align-content: center;
+}
+
+.container main .coluna2 .cartao1 .primeira  {
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 10px;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+}  
+
+.container main .coluna2 .cartao1 .afazer button.primeira {
+    float: right;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+.container main .coluna2 .add {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container main .coluna2 .segundo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
+    padding: 10px;
+}
+
+.container main .coluna2 .segundo:hover {
+    border: 1px solid var(--cor-azule)
+}
+
+.container main .coluna2 .button.primeira:hover {
+    background: var(--cor-transparente);
+    border-radius: 5px;
+}
+
+.container main .coluna2 .add:hover {
+    background: var(--cor-transparente)
+}
+
+/*start column three*/
+.container main .coluna3 {
+    position: relative;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: var(--cor-gray);
+    text-align: left;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 15px;
+} 
+
+.container main .coluna3 .cartao1 {
+    display: flex;
+    justify-content: space-between; 
+    align-content: center;
+}
+
+.container main .coluna3 .cartao1 .primeira  {
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 10px;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+}  
