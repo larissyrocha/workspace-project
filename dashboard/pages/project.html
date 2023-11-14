@@ -14,10 +14,19 @@
     <div class="container">
         <header>
             <div class="top">
-                <div class="searchBx">
-                    <span class="material-symbols-outlined">
+                <div class="menu">
+                    <span id="burguer"  class="material-symbols-outlined" onclick="clickMenu()">
                         menu
                     </span>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">dashbord</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Tasks</a></li>
+                    </ul>
+                </div>
+                <div class="searchBx">
                     <div class="inputBx">
                         <span class="material-symbols-outlined">
                             search
@@ -25,12 +34,12 @@
                         <input type="text" placeholder="search">
                     </div>
                 </div>
-                <div class="user">
-                    <!-- <div class="noti">
+                <div class="noti">
                         <span class="material-symbols-outlined">
                             notifications
                         </span>
-                    </div> -->
+                </div> 
+                <div class="user">
                     <div class="userImg"><img src="../img/eu_crm.webp" alt="fotousuario"></div>
                 </div>
             </div>
@@ -137,11 +146,11 @@
                         Planejamento de projetos
                     </button>
                 </div>
-                <div class="cartao3">
+                <!-- <div class="cartao3">
                     <button type="button" class="segundo">
                         Planejamento de projetos
                     </button>
-                </div>
+                </div> -->
                 <div class="cartao4">
                         <button type="button" class="add">
                             <span class="material-symbols-outlined">
@@ -152,42 +161,16 @@
                 </div>
             </div>
             <div class="coluna4">
-                <div class="cartao1">
-                    <div class="afazer">
-                        <button type="button" class="primeira">
-                            A fazer
-                        </button>
-                    </div>
-                    <!-- <div class="afazer">
-                        <textarea aria-label="A fazer" class="afazera" dir="auto" style="height: 32px;">A fazer</textarea>
-                    </div> -->
-                    <div class="icons">
-                        <span class="material-symbols-outlined">
-                            more_horiz
-                        </span>
-                    </div>
-                </div>
-                <div class="cartao2">
-                    <button type="button" class="segundo">
-                        Planejamento de projetos
-                    </button>
-                </div>
-                <div class="cartao3">
-                    <button type="button" class="segundo">
-                        Planejamento de projetos
-                    </button>
-                </div>
-                <div class="cartao4">
                         <button type="button" class="add">
                             <span class="material-symbols-outlined">
                                 add
                             </span>
                             Adicionar cartão
                         </button>
-                </div>
             </div>
         </main> 
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

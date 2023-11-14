@@ -32,21 +32,38 @@
     border-radius: 10px;
     border: 1px solid var(--cor-branco);
 }
+/* 
+::-webkit-scrollbar {
+    width: thin;
+} */
+
 
 /*start top*/
 .container .top {
     position: relative;
     /*Define a posição do elemento .container como "relativa" em relação à sua posição original. */
     width: 100%;
-    height: 70px;
+    height: 60px;
     display: flex; 
     /*faz com que ele funcione como um "container flexível". Isso torna mais fácil organizar e alinhar os elementos dentro desse container, seja na horizontal  ou na vertical*/
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
-    background-color: var(--cor-gray); 
+    background-color: var(--cor-gray);
+    gap: 20px; 
 }  
+/*start menu*/
+.container .top .menu  {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
 
+.container .top .menu span {
+    margin-right: 900px;
+}
+    
  .container .top .searchBx {
     position: relative;
     display: flex;
@@ -82,6 +99,11 @@
     margin-right: 10px;
 }
 
+.container .top .noti {
+    display: flex;
+    justify-self: flex-end;
+}
+
 .container .top .user {
     /* position: relative; */
     width: 40px;
@@ -112,13 +134,14 @@
     color: rgb(190, 190, 190);
     font-size: 0.8em;
 } 
+/*start main*/
  .container main {
     width: 100%;
     height: 550px;
     display: flex;
     justify-content: space-between;
     background-color: var(--cor-azule);
-    padding: 10px 6px;
+    padding: 10px 20px;
 }
 
 .container main .coluna1 {
@@ -308,3 +331,82 @@
     border: none;
     background: transparent;
 }  
+.container main .coluna3 .cartao1 .afazer button.primeira {
+    float: right;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+.container main .coluna3 .add {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container main .coluna3 .segundo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
+    padding: 10px;
+}
+
+.container main .coluna3 .segundo:hover {
+    border: 1px solid var(--cor-azule)
+}
+
+.container main .coluna3 .button.primeira:hover {
+    background: var(--cor-transparente);
+    border-radius: 5px;
+}
+
+.container main .coluna3 .add:hover {
+    background: var(--cor-transparente)
+}
+
+/*start column four*/
+.container main .coluna4 {
+    position: relative;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: var(--cor-gray);
+    text-align: left;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 15px;
+} 
+
+.container main .coluna4 .add {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    outline: none; 
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container main .coluna4 .add:hover {
+    background: var(--cor-transparente)
+}
