@@ -60,8 +60,32 @@
     cursor: pointer;
 }
 
+.container .top .menu ul {
+    list-style-type: none;
+}
+
+.container .top .menu ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--cor-rosa);
+    color: #fff;
+    border-top: 1px solid var(--cor-branco);
+    padding: 10px 50px;
+}
+.container .top nav {
+    display: none;
+    position: fixed;
+    will-change: top;
+    top: 52px;
+    z-index: 2;
+
+}
+
 .container .top .menu span {
-    margin-right: 900px;
+    margin-right: 880px;
+    display: block;
+    text-align: center;
 }
     
  .container .top .searchBx {

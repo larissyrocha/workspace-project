@@ -1,8 +1,8 @@
 function clickMenu() {
-    if (menu.style.display == 'block') {
-        menu.style.display = 'none'
+    if (lista.style.display == 'block') {
+        lista.style.display = 'none';
     } else {
-        menu.style.display = 'block'
+        lista.style.display = 'block';
     }
 }
 
