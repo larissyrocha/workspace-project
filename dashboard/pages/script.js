@@ -6,3 +6,10 @@ function clickMenu() {
     }
 }
 
+const textarea = document.getElementsByClassName('mytext');
+
+textarea.addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+

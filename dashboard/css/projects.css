@@ -219,21 +219,15 @@
     padding: 5px;
 }
 
-.container main .coluna1 .segundo {
+.container main .coluna1 textarea {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    outline: none; 
-    border: none;
+    height: 38px;
     border-radius: 5px;
-    box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
+    border: none;
     padding: 10px;
-}
+    cursor: pointer;
+    outline: none
 
-.container main .coluna1 .segundo:hover {
-    border: 1px solid var(--cor-azule)
 }
 
 .container main .coluna1 .button.primeira:hover {
@@ -298,21 +292,15 @@
     padding: 5px;
 }
 
-.container main .coluna2 .segundo {
+.container main .coluna2 textarea {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    outline: none; 
-    border: none;
+    height: 38px;
     border-radius: 5px;
-    box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
+    border: none;
     padding: 10px;
-}
+    cursor: pointer;
+    outline: none;
 
-.container main .coluna2 .segundo:hover {
-    border: 1px solid var(--cor-azule)
 }
 
 .container main .coluna2 .button.primeira:hover {
@@ -375,8 +363,18 @@
     border-radius: 5px;
     padding: 5px;
 }
+.container main .coluna3 textarea {
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
 
-.container main .coluna3 .segundo {
+}
+
+/* .container main .coluna3 .segundo {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -387,7 +385,7 @@
     border-radius: 5px;
     box-shadow: 1px 2px 3px var(rgba(0,0,0,1));
     padding: 10px;
-}
+} */
 
 .container main .coluna3 .segundo:hover {
     border: 1px solid var(--cor-azule)
@@ -416,7 +414,11 @@
     border-radius: 12px;
     gap: 15px;
 } 
-
+.container main .coluna4 textarea {
+    height: 37px;
+    border-radius: 5px;
+    border: none;
+}
 .container main .coluna4 .add {
     display: flex;
     justify-content: flex-start;
